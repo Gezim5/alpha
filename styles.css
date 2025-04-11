@@ -1,0 +1,816 @@
+/* Reset & Base */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  /* Header */
+  .site-header {
+    background: #111;
+    color: #fff;
+    padding: 15px 0;
+  }
+  .site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-img {
+    width: 100px;
+    height: auto;
+  }
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Navigation */
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav a:hover,
+  .nav a.active {
+    color: #e8491d;
+  }
+  
+  /* Hero Showroom */
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('hero.jpg') no-repeat center center / cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .hero-car-container {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .hero-car {
+    width: 100%;
+    max-width: 600px;
+    animation: parkCar 4s ease-out forwards;
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  @keyframes parkCar {
+    0% {
+      transform: translateX(100vw);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(-5vw) scale(1.05);
+    }
+    100% {
+      transform: translateX(0vw) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Smoke Trail */
+  .smoke {
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    width: 300px;
+    height: 200px;
+    background: radial-gradient(ellipse at center, rgba(200, 200, 200, 0.3) 0%, transparent 80%);
+    animation: smokeFade 4s infinite linear;
+    z-index: 0;
+  }
+  @keyframes smokeFade {
+    0% { transform: translateY(0) scale(0.8); opacity: 0.5; }
+    100% { transform: translateY(-60px) scale(1.2); opacity: 0; }
+  }
+  
+  /* Hero Text */
+  .hero-text h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  .hero-text p {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  .hero-text .btn {
+    background-color: #e8491d;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  .hero-text .btn:hover {
+    background-color: #cf3e15;
+  }
+
+  .hero-lighting {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.9) 100%);
+    pointer-events: none;
+    z-index: 0;
+    animation: pulseLight 5s ease-in-out infinite;
+  }
+  
+  @keyframes pulseLight {
+    0%, 100% {
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.9) 100%);
+    }
+    50% {
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.85) 100%);
+    }
+  }
+  
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .site-footer {
+    margin-top: auto;
+  }
+  
+  .dark-section {
+    background: #111;
+    color: #000000;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .teaser-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .teaser-content p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 20px;
+  }
+  
+  .btn-outline {
+    border: 2px solid #e8491d;
+    background: transparent;
+    color: #e8491d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline:hover {
+    background: #e8491d;
+    color: #fff;
+  }
+  
+  
+  /* Features Section */
+  .features-section {
+    background: #fff;
+    padding: 60px 0;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+  .feature-box {
+    background: #f1f1f1;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .feature-box:hover {
+    transform: translateY(-5px);
+  }
+  .feature-box h3 {
+    color: #e8491d;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Inventory Section */
+  .inventory-section {
+    background: #fff;
+    padding: 60px 0;
+  }
+  .inventory-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  .inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+  }
+  .car-card {
+    background: #fafafa;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+  }
+  .car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  .image-slider {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+  }
+  .slider-image {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slider-image.active {
+    display: block;
+  }
+  .prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .prev-btn { left: 10px; }
+  .next-btn { right: 10px; }
+  .car-details {
+    padding: 20px;
+  }
+  .car-details h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+  }
+  .car-details h4 {
+    color: #e8491d;
+    margin-top: 15px;
+    font-size: 1.1rem;
+  }
+  
+  /* About */
+
+  [data-aos^="fade"][data-aos][data-aos-delay] {
+    transition-delay: var(--aos-delay, 0ms) !important;
+  }
+  
+  .about-icon {
+    transition: transform 0.6s ease;
+  }
+  .about-block:hover .about-icon {
+    transform: rotateY(360deg);
+  }
+  
+  .about-section {
+    background: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .about-section .intro {
+    max-width: 800px;
+    margin: 0 auto 30px;
+  }
+  .about-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .about-block {
+    background: #f9f9f9;
+    padding: 30px 20px;
+    border-radius: 8px;
+  }
+  .about-block h3 {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    color: #e8491d;
+  }
+  .about-icon {
+    color: #e8491d;
+    margin-bottom: 10px;
+  }
+  .about-section .closing {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #555;
+  }
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .site-footer {
+    margin-top: auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #e8491d;
+  }
+  
+  .about-section {
+    background: #fff;
+    padding: 284px 20px;
+    text-align: center;
+  }
+  
+  .about-section .intro {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .about-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    min-height: 1px; /* ✅ forces layout reflow */
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  .about-block {
+    flex: 1 1 260px;
+    max-width: 320px;
+    background: #f9f9f9;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+  }
+  .about-block:hover {
+    transform: translateY(-5px);
+  }
+  
+  .about-block h3 {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    color: #e8491d;
+  }
+  
+  .about-icon {
+    color: #e8491d;
+    margin-bottom: 10px;
+  }
+  
+  .about-section .closing {
+    max-width: 700px;
+    margin: 40px auto 0;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #444;
+  }
+  
+  
+  
+  /* Contact */
+  .contact-page {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #111;
+    margin-bottom: 10px;
+  }
+  
+  .contact-lead {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .contact-card {
+    background: #f7f7f7;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .contact-card i {
+    font-size: 2rem;
+    color: #e8491d;
+    margin-bottom: 12px;
+  }
+  
+  .contact-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #e8491d;
+  }
+  
+  .contact-card p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+  .working-hours {
+    margin-top: 50px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  
+  .working-hours h3 {
+    color: #e8491d;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+  .hours-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background: #f7f7f7;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  
+  .hours-list li:hover {
+    background: #f1f1f1;
+  }
+  
+  .hours-list li.closed {
+    background: #ffeaea;
+    color: #d00000;
+    font-weight: bold;
+  }
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .site-footer {
+    margin-top: auto;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #e8491d;
+  }
+  .contact-direct {
+    background: #fff;
+    padding: 160px 20px;
+    text-align: center;
+  }
+  .contact-lead {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  .contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  .contact-box {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+  }
+  .contact-box:hover {
+    transform: translateY(-5px);
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  .contact-box i {
+    font-size: 1.8rem;
+    color: #e8491d;
+  }
+  .contact-box h3 {
+    margin-bottom: 5px;
+    color: #e8491d;
+  }
+  .working-hours {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .working-hours h3 {
+    color: #e8491d;
+    margin-bottom: 15px;
+  }
+  
+  
+  /* Footer */
+  .site-footer {
+    background: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 0 20px;
+    font-size: 0.95rem;
+  }
+  
+  .site-footer a {
+    color: #e8491d;
+    text-decoration: none;
+  }
+  
+  .site-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .site-footer .footer-top,
+  .site-footer .footer-bottom {
+    margin-bottom: 10px;
+  }
+  
+  .site-footer .footer-bottom {
+    font-size: 0.85rem;
+    color: #888;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .site-header .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .nav li {
+      margin: 8px 0;
+    }
+    .hero-car {
+      width: 90%;
+    }
+  }
+  
+    /* Mobile Menu */
+  .menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      background: #111;
+      width: 100%;
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 20px;
+    }
+  
+    .nav.active ul {
+      display: flex;
+    }
+  
+    .nav ul li {
+      margin: 10px 0;
+    }
+  }
+  
+
+/* Logo and Header */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-img {
+    width: 50px;
+  }
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Mobile Nav Cool Animation */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 1001;
+    }
+  
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #111;
+      transform: translateY(-100%);
+      transition: transform 0.4s ease-in-out;
+      z-index: 1000;
+      padding-top: 100px;
+    }
+  
+    .nav.active {
+      transform: translateY(0);
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .nav ul li a {
+      font-size: 1.5rem;
+      color: white;
+    }
+  
+    .nav ul li a:hover,
+    .nav ul li a.active {
+      color: #e8491d;
+    }
+  }
+  
+/* iPhone 14 */
+@media only screen and (max-width: 390px) {
+  .container { padding: 0 16px; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text p { font-size: 1rem; }
+  .nav ul li a { font-size: 1.2rem; }
+}
+
+/* iPhone 14 Pro */
+@media only screen and (max-width: 393px) {
+  .container { padding: 0 16px; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text p { font-size: 1rem; }
+  .nav ul li a { font-size: 1.2rem; }
+}
+
+/* iPhone 14 Pro Max */
+@media only screen and (max-width: 430px) {
+  .container { padding: 0 16px; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text p { font-size: 1rem; }
+  .nav ul li a { font-size: 1.2rem; }
+}
+
+/* iPhone 15 */
+@media only screen and (max-width: 393px) {
+  .container { padding: 0 16px; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text p { font-size: 1rem; }
+  .nav ul li a { font-size: 1.2rem; }
+}
+
+/* iPhone 15 Pro */
+@media only screen and (max-width: 393px) {
+  .container { padding: 0 16px; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text p { font-size: 1rem; }
+  .nav ul li a { font-size: 1.2rem; }
+}
+
+/* iPhone 15 Pro Max */
+@media only screen and (max-width: 430px) {
+  .container { padding: 0 16px; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text p { font-size: 1rem; }
+  .nav ul li a { font-size: 1.2rem; }
+}
+
+/* iPhone 16 (estimated same as 15) */
+@media only screen and (max-width: 393px) {
+  .container { padding: 0 16px; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text p { font-size: 1rem; }
+  .nav ul li a { font-size: 1.2rem; }
+}
+
+/* iPhone 16 Pro */
+@media only screen and (max-width: 430px) {
+  .container { padding: 0 16px; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text p { font-size: 1rem; }
+  .nav ul li a { font-size: 1.2rem; }
+}
+
+/* iPhone 16 Pro Max */
+@media only screen and (max-width: 430px) {
+  .container { padding: 0 16px; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text p { font-size: 1rem; }
+  .nav ul li a { font-size: 1.2rem; }
+}

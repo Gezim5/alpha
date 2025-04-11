@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Alpha Autos - Inventory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+          <div class="logo-area">
+            <img src="Alpha.svg" alt="Alpha Autos Logo" class="logo-img" />
+            <span class="logo-text">Alpha Autos</span>
+          </div>
+      <!-- Burger Icon -->
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="nav" id="navbar">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="inventory.html" class="active">Inventory</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+    <!-- Inventory Section -->
+    <section class="inventory-section">
+      <div class="container">
+        <h2>Our Inventory</h2>
+        <div class="inventory-grid">
+
+<!-- Car Listing Card: Mercedes-Benz S-Class S63 AMG -->
+<div class="car-card">
+    <div class="image-slider">
+      <img src="s63/s1.webp" alt="Mercedes S63 AMG Front" class="slider-image active" />
+      <img src="s63/s2.webp" alt="Mercedes S63 AMG Side" class="slider-image" />
+      <img src="s63/s3.webp" alt="Mercedes S63 AMG Interior" class="slider-image" />    
+        <img src="s63/s4.webp" alt="Mercedes S63 AMG Back" class="slider-image" />
+        <img src="s63/s5.webp" alt="Mercedes S63 AMG Wheel" class="slider-image" />
+      <button class="prev-btn">&#10094;</button>
+      <button class="next-btn">&#10095;</button>
+    </div>
+    <div class="car-details">
+      <h3>Mercedes-Benz S-Class S63 AMG</h3>
+      <ul>
+        <li><strong>Year:</strong> 2014</li>
+        <li><strong>Mileage:</strong> 98,000 km</li>
+        <li><strong>Engine:</strong> 5.5L V8 Bi-Turbo</li>
+        <li><strong>Transmission:</strong> Automatic</li>
+        <li><strong>Drivetrain:</strong> AWD (4MATIC)</li>
+      </ul>
+      <h4>Condition &amp; Features</h4>
+      <ul>
+        <li><strong>Condition:</strong> Excellent</li>
+        <li><strong>Color:</strong> Obsidian Black Metallic</li>
+        <li><strong>Key Features:</strong> AMG Package, Night Vision, Soft-Close Doors, Panoramic Roof, Massage Seats, Burmester Sound</li>
+        <li><strong>Accident History:</strong> Clean Title / No Accidents</li>
+      </ul>
+      <h4>Pricing &amp; Contact Info</h4>
+      <ul>
+        <li><strong>Asking Price:</strong> 46,900€</li>
+        <li><strong>Contact:</strong> 555-789-1234</li>
+        <li><strong>Viewing:</strong> Available by appointment</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- Car Listing Card: Porsche 911 Turbo S – 1 of 25 -->
+<div class="car-card">
+    <div class="image-slider">
+      <img src="porshe/p1.webp" alt="Porsche 911 Turbo S Front" class="slider-image active" />
+      <img src="porshe/p2.webp" alt="Porsche 911 Turbo S Rear" class="slider-image" />
+      <img src="porshe/p3.webp" alt="Porsche 911 Turbo S Interior" class="slider-image" />
+      <img src="porshe/p4.webp" alt="Porsche 911 Turbo S Side" class="slider-image" />
+      <img src="porshe/p5.webp" alt="Porsche 911 Turbo S Wheel" class="slider-image" />
+      <button class="prev-btn">&#10094;</button>
+      <button class="next-btn">&#10095;</button>
+    </div>
+    <div class="car-details">
+      <h3>Porsche 911 Turbo S <span style="color:#e8491d;">(1 of 25 Limited Edition)</span></h3>
+      <ul>
+        <li><strong>Year:</strong> 2021</li>
+        <li><strong>Mileage:</strong> 12,000 km</li>
+        <li><strong>Engine:</strong> 3.8L Twin-Turbo Flat-6</li>
+        <li><strong>Transmission:</strong> 8-Speed PDK Automatic</li>
+        <li><strong>Drivetrain:</strong> AWD</li>
+      </ul>
+      <h4>Condition &amp; Features</h4>
+      <ul>
+        <li><strong>Condition:</strong> Showroom Condition</li>
+        <li><strong>Color:</strong> GT Silver Metallic</li>
+        <li><strong>Key Features:</strong> Lightweight Carbon Package, Ceramic Brakes, Chrono Sport Package, Alcantara Interior, Exclusive Manufaktur Badging</li>
+        <li><strong>Accident History:</strong> 1 Owner / No Accidents / Collector Owned</li>
+      </ul>
+      <h4>Pricing &amp; Contact Info</h4>
+      <ul>
+        <li><strong>Asking Price:</strong> 245,000€</li>
+        <li><strong>Contact:</strong> +49 160 1234567</li>
+        <li><strong>Viewing:</strong> Private Viewing Only</li>
+      </ul>
+    </div>
+  </div>
+  
+
+          <!-- Car Listing Card: Audi A8 50 TDI -->
+<div class="car-card">
+    <div class="image-slider">
+      <img src="a8/a1.webp" alt="Audi A8 Front" class="slider-image active" />
+      <img src="a8/a2.webp" alt="Audi A8 Side" class="slider-image" />
+      <img src="a8/a3.webp" alt="Audi A8 Interior" class="slider-image" />
+      <img src="a8/a4.webp" alt="Audi A8 Back" class="slider-image" />
+      <img src="a8/a5.webp" alt="Audi A8 Wheel" class="slider-image" />
+      <button class="prev-btn">&#10094;</button>
+      <button class="next-btn">&#10095;</button>
+    </div>
+    <div class="car-details">
+      <h3>Audi A8 50 TDI Quattro</h3>
+      <ul>
+        <li><strong>Year:</strong> 2020</li>
+        <li><strong>Mileage:</strong> 45,000 km</li>
+        <li><strong>Engine:</strong> 3.0L V6 Turbo Diesel</li>
+        <li><strong>Transmission:</strong> Automatic (Tiptronic)</li>
+        <li><strong>Drivetrain:</strong> Quattro AWD</li>
+      </ul>
+      <h4>Condition &amp; Features</h4>
+      <ul>
+        <li><strong>Condition:</strong> Excellent</li>
+        <li><strong>Color:</strong> Daytona Gray Pearl</li>
+        <li><strong>Key Features:</strong> Matrix LED, Virtual Cockpit, Massage Seats, Air Suspension, Soft-Close Doors, 360° Camera</li>
+        <li><strong>Accident History:</strong> Clean Title / No Accidents</li>
+      </ul>
+      <h4>Pricing &amp; Contact Info</h4>
+      <ul>
+        <li><strong>Asking Price:</strong> 59,500€</li>
+        <li><strong>Contact:</strong> 444-222-1188</li>
+        <li><strong>Viewing:</strong> Evenings & Weekends Available</li>
+      </ul>
+    </div>
+  </div>
+
+          <!-- Car Listing Card 4: Mercedes-Benz CLS 63 AMG -->
+          <div class="car-card">
+            <div class="image-slider">
+              <img src="cls/foto1.webp" class="slider-image active" />
+              <img src="cls/foto2.webp" class="slider-image" />
+              <img src="cls/foto3.webp" class="slider-image" />
+              <img src="cls/foto4.webp" class="slider-image" />
+              <img src="cls/foto5.webp" class="slider-image" />
+
+
+              <button class="prev-btn">&#10094;</button>
+              <button class="next-btn">&#10095;</button>
+            </div>
+            <div class="car-details">
+              <h3>Mercedes-Benz CLS 63 AMG</h3>
+              <ul>
+                <li><strong>Year:</strong> 2016</li>
+                <li><strong>Mileage:</strong> 70,000 km</li>
+                <li><strong>Engine:</strong> 5.5L V8 Bi-Turbo</li>
+                <li><strong>Transmission:</strong> Automatic</li>
+                <li><strong>Drivetrain:</strong> AWD</li>
+              </ul>
+              <h4>Condition &amp; Features</h4>
+              <ul>
+                <li><strong>Condition:</strong> Excellent</li>
+                <li><strong>Color:</strong> Matte Black</li>
+                <li><strong>Key Features:</strong> Leather Interior, Night Package, Performance Exhaust, Harman Kardon</li>
+                <li><strong>Accident History:</strong> Clean</li>
+              </ul>
+              <h4>Pricing &amp; Contact Info</h4>
+              <ul>
+                <li><strong>Asking Price:</strong> 39,000€</li>
+                <li><strong>Contact:</strong> 777-888-9999</li>
+              </ul>
+            </div>
+          </div>
+
+
+
+          <!-- Car Listing Card: BMW 740 xDrive M Sport 2024 -->
+<div class="car-card">
+    <div class="image-slider">
+      <img src="bmw/b1.webp" class="slider-image active" alt="BMW 740 xDrive Front" />
+      <img src="bmw/b2.webp" class="slider-image" alt="BMW 740 xDrive Side" />
+      <img src="bmw/b3.webp" class="slider-image" alt="BMW 740 xDrive Rear" />
+      <img src="bmw/b4.webp" class="slider-image" alt="BMW 740 xDrive Interior" />
+      <img src="bmw/b5.webp" class="slider-image" alt="BMW 740 xDrive Display" />
+  
+      <button class="prev-btn">&#10094;</button>
+      <button class="next-btn">&#10095;</button>
+    </div>
+    <div class="car-details">
+      <h3>BMW 740 xDrive M Sport (2024)</h3>
+      <ul>
+        <li><strong>Year:</strong> 2024</li>
+        <li><strong>Mileage:</strong> 5,000 km</li>
+        <li><strong>Engine:</strong> 3.0L I6 Mild Hybrid</li>
+        <li><strong>Transmission:</strong> 8-Speed Automatic</li>
+        <li><strong>Drivetrain:</strong> xDrive AWD</li>
+      </ul>
+      <h4>Condition &amp; Features</h4>
+      <ul>
+        <li><strong>Condition:</strong> Brand New</li>
+        <li><strong>Color:</strong> Carbon Black Metallic</li>
+        <li><strong>Key Features:</strong> Executive Lounge Seating, Panoramic Sky Lounge, BMW Theatre Screen, Laser Headlights, Massage Seats, Soft-Close Doors</li>
+        <li><strong>Accident History:</strong> New Car / No Accidents</li>
+      </ul>
+      <h4>Pricing &amp; Contact Info</h4>
+      <ul>
+        <li><strong>Asking Price:</strong> 139,900€</li>
+        <li><strong>Contact:</strong> +49 170 4456789</li>
+        <li><strong>Viewing:</strong> Anytime / Dealership or Private Presentation</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Car Listing Card: Land Rover Range Rover Sport HSE Dynamic 2017 -->
+<div class="car-card">
+    <div class="image-slider">
+      <img src="sport/rr1.webp" class="slider-image active" alt="Range Rover Sport Front" />
+      <img src="sport/rr2.webp" class="slider-image" alt="Range Rover Sport Side" />
+      <img src="sport/rr3.webp" class="slider-image" alt="Range Rover Sport Rear" />
+      <img src="sport/rr4.webp" class="slider-image" alt="Range Rover Sport Interior" />
+      <img src="sport/rr5.webp" class="slider-image" alt="Range Rover Sport Details" />
+  
+      <button class="prev-btn">&#10094;</button>
+      <button class="next-btn">&#10095;</button>
+    </div>
+    <div class="car-details">
+      <h3>Land Rover Range Rover Sport HSE Dynamic (2017)</h3>
+      <ul>
+        <li><strong>Year:</strong> 2017</li>
+        <li><strong>Mileage:</strong> 89,000 km</li>
+        <li><strong>Engine:</strong> 3.0L V6 Diesel (TDV6)</li>
+        <li><strong>Transmission:</strong> 8-Speed Automatic</li>
+        <li><strong>Drivetrain:</strong> AWD (Terrain Response)</li>
+      </ul>
+      <h4>Condition &amp; Features</h4>
+      <ul>
+        <li><strong>Condition:</strong> Excellent</li>
+        <li><strong>Color:</strong> Santorini Black Metallic</li>
+        <li><strong>Key Features:</strong> Panoramic Roof, Meridian Sound System, Heated Leather Seats, Air Suspension, Navigation Pro, Rear Camera</li>
+        <li><strong>Accident History:</strong> No Accidents / Clean Title</li>
+      </ul>
+      <h4>Pricing &amp; Contact Info</h4>
+      <ul>
+        <li><strong>Asking Price:</strong> 48,900€</li>
+        <li><strong>Contact:</strong> +49 152 55667788</li>
+        <li><strong>Viewing:</strong> Available Weekdays & Weekends</li>
+      </ul>
+    </div>
+  </div>
+  
+
+        </div>
+      </div>
+    </section>
+
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <p>&copy; 2025 <strong>Alpha Autos</strong>. All Rights Reserved.</p>
+      <p>
+        <span>Follow us:</span>
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">YouTube</a>
+      </p>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        Website developed by <a href="https://zivag.de" target="_blank" rel="noopener noreferrer"><strong>Z I V A G</strong></a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
